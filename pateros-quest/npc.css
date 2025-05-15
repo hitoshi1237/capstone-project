@@ -1,0 +1,15 @@
+.container {
+ display: flex;
+ justify-content: space-evenly;
+}
+.npc-image {
+    height: 200px;
+    width: 200px;
+     
+}
+.map-image {
+    height: 200px;
+    width: 200px;
+  
+
+}

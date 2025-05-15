@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Level 3 - Drag & Drop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2 class="title">🎯 Level 3: Match the Pateros Icons!</h2>
+  <div class="drag-container">
+    <div class="draggables">
+      <img src="images/balut.jpg" draggable="true" id="balut" class="drag-item" alt="Balut">
+      <img src="images/alfombra.jpg" draggable="true" id="alfombra" class="drag-item" alt="Alfombra">
+      <img src="images/Itik.jpg" draggable="true" id="itik" class="drag-item" alt="Itik">
+    </div>
+    <div class="dropzones">
+      <div class="drop-box" data-match="balut">🥚 Delicacy</div>
+      <div class="drop-box" data-match="alfombra">👞 Footwear</div>
+      <div class="drop-box" data-match="itik">🦆 Animal</div>
+    </div>
+  </div>
+  <p id="drag-feedback"></p>
+  <button onclick="goToNextLevel()" id="next-level-btn" class="hidden">Next Level</button>
+  <a href="menu.html">GO TO MAIN MENU</a>
+
+  <script src="level3.js"></script>
+</body>
+</html>

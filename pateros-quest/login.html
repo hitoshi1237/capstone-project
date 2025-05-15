@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login & Sign Up</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #4d4f52;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 50px;
+    }
+
+    .container {
+      display: flex;
+      gap: 50px;
+    }
+
+    .form-box {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 500px;
+      height: 500px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding-top: 20px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #df9e08;
+      border: none;
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+    p {
+        text-decoration: underline;
+        font-weight: bold;
+        padding-top: 20px;
+        text-align: center;
+    }
+    a:link {
+        color: red;
+    }
+    a:link:hover {
+        color: red;
+    }
+    a:visited {
+        color: red;
+    }
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Login Form -->
+    <div class="form-box">
+      <h2>  <img class="logo" src="images/Pateros Quest Logo.png" alt="">Login</h2>
+      <form>
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+        <p>Don't have account yet?<a href="signin.html"> Sign up here</a></p>
+      
+      </form>
+    </div>
+
+    
+  </div>
+</body>
+</html>
