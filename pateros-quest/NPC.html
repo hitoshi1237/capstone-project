@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Don Francisco - Town Guide</title>
+  <style>
+    :root {
+      --primary-color: #8b5e3c;
+      --accent-color: #d49a6a;
+      --bg-light: #fffbea;
+      --bg-box: #fff7e6;
+      --text-dark: #333;
+      --highlight: #a65e2e;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Georgia, serif;
+      background-color: #f6f1e3;
+      color: var(--text-dark);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .game-container {
+      background-color: var(--bg-light);
+      border: 2px solid var(--primary-color);
+      border-radius: 12px;
+      max-width: 700px;
+      width: 100%;
+      padding: 30px 25px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+
+    .npc-section {
+      background-color: var(--bg-box);
+      border: 1.5px solid var(--accent-color);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .npc-portrait {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--accent-color);
+    }
+
+    .npc-info {
+      flex: 1;
+    }
+
+    .npc-name {
+      font-size: 1.6em;
+      color: var(--primary-color);
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .npc-text {
+      font-size: 1.05em;
+      line-height: 1.5;
+      min-height: 100px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    button {
+      background-color: var(--highlight);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #86451a;
+    }
+
+    button a {
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="game-container">
+    <div class="npc-section">
+      <img class="npc-portrait" src="Don Francisco.png" alt="Don Francisco portrait" />
+      <div class="npc-info">
+        <div class="npc-name">Don Francisco</div>
+        <div id="npc-text" class="npc-text">
+          Welcome, traveler! I am Don Francisco, your humble guide to this storied land.
+        </div>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button onclick="tellHistory()">📜 Hear the History</button>
+      <button onclick="explainMechanics()">🎮 Learn the Game</button>
+      <button onclick="greet()">👋 Greet Don Francisco</button>
+      <button><a href="menu.html">🏠 Main Menu</a></button>
+    </div>
+  </div>
+
+  <script>
+    const npcText = document.getElementById('npc-text');
+
+    function tellHistory() {
+      npcText.textContent =
+        "During the Spanish colonial era, I, Don Francisco, was entrusted with the welfare of this town. " +
+        "We built chapels, cultivated lands, and preserved our customs with pride. As you walk these streets, know that each stone holds a story.";
+    }
+
+    function explainMechanics() {
+      npcText.textContent =
+        "In this game, your journey involves exploring the town, completing tasks, and making choices that affect your path. " +
+        "Talk to villagers, manage your items, and uncover the secrets of our land. Choose wisely — your legacy depends on it.";
+    }
+
+    function greet() {
+      npcText.textContent =
+        "Greetings once more, brave traveler! I am at your service. Would you like to hear about our town’s rich history or learn how to navigate this game?";
+    }
+  </script>
+</body>
+</html>

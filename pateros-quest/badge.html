@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pateros Quest - Badge Collection</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Arial';
+      background-color: #f5f5dc;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #333;
+    }
+
+    .badge-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      width: 120px;
+      height: 120px;
+      border: 3px solid #999;
+      border-radius: 50%;
+      background-color: #eee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .earned {
+      background-color: gold;
+      border-color: #ff9900;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>🏅 Your Badges</h1>
+  <div class="badge-container">
+    <div class="badge" id="badge1">Level 1</div>
+    <div class="badge" id="badge2">Level 2</div>
+    <div class="badge" id="badge3">Level 3</div>
+  </div>
+
+  <script>
+    if (localStorage.getItem('level1Completed') === 'true') {
+      document.getElementById('badge1').classList.add('earned');
+      document.getElementById('badge1').innerText = '🧠 Trivia Master';
+    }
+
+    if (localStorage.getItem('level2Completed') === 'true') {
+      document.getElementById('badge2').classList.add('earned');
+      document.getElementById('badge2').innerText = '🧩 Puzzle Solver';
+    }
+
+    if (localStorage.getItem('level3Completed') === 'true') {
+      document.getElementById('badge3').classList.add('earned');
+      document.getElementById('badge3').innerText = '🎯 Drag Champ';
+    }
+  </script>
+</body>
+</html>

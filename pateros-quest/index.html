@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pateros Quest</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="login.html">LOGIN</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="send-feedback.html">SEND US FEEDBACK</a></li>
+      <li><a href="settings.html">SETTINGS</a></li>
+      
+    </ul>
+  </nav>
+  <div id="language-selection" class="overlay">
+   <img class="game-logo" src="images/Pateros Quest Logo.png" alt="Game Logo">
+    <h1 class="welcome-text">Welcome!</h1>
+    <h1>PATEROS QUEST: A PINOY HISTORY TRIVIA ADVENTURE GAME</h1>
+    <h2 style="color: green;">Choose Language / Piliin ang Wika <span style="color: aliceblue;">to start</span> </h2>
+    <button onclick="setLanguage('en')" class="english-btn">English</button>
+    <button onclick="setLanguage('fil')" class="filipino-btn">Filipino</button>
+   
+  </div>
+
+  <main id="game-content" class="hidden">
+    <section id="intro">
+      <div class="npc-dialog">
+        <img src="Don Francisco.png" alt="Don Francisco" />
+        <div id="dialog-text"></div>
+      </div>
+      <button onclick="nextDialog()">Next</button>
+    </section>
+
+    <section id="tutorial" class="hidden">
+      <h3 id="tutorial-title"></h3>
+      <p id="tutorial-text"></p>
+      <button onclick="startLevel1()">Start Level 1</button>
+    </section>
+  </main>
+ 
+
+  <script src="script.js"></script>
+  <script src="scriptsetting.js"></script>
+</body>
+</html>

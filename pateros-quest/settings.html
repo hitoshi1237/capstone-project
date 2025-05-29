@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Settings UI</title>
+  <style>
+    body {
+      background-color: #6c6968;
+      font-family: sans-serif;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .settings-container {
+      background: #5a5a55;
+      border: 4px solid #2b1a10;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      width: 400px;
+      height: 700px;
+      border-radius: 10px;
+    }
+    .setting-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+    .toggle-btn {
+      width: 40px;
+      height: 20px;
+      border-radius: 10px;
+      border: 2px solid #222;
+      cursor: pointer;
+      background-color: red;
+      position: relative;
+    }
+    .toggle-btn.on {
+      background-color: limegreen;
+    }
+    button {
+      background-color: #2980b9;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      font-size: 14px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .language-btn {
+      background-color: #3498db;
+      font-weight: bold;
+    }
+    .volume-row {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 350px;
+    }
+    .volume-row label {
+      margin-bottom: 5px;
+    }
+    .volume-slider {
+      width: 100%;
+    }
+    .game-logo {
+      width: 150px;
+      height: auto;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+    .back-to-menu {
+      background-color: rgb(255, 217, 0);
+      padding: 20px;
+      border-radius: 10px;
+      transition:   0.3s ease;
+    }
+    a:link {
+      text-decoration: none;
+    }
+    .back-to-menu:hover {
+      background-color: white;
+      color: rgb(255, 191, 0);
+    }
+   
+  </style>
+</head>
+<body>
+  <div class="settings-container">
+    <div class="setting-row">
+      <span>Sound:</span>
+      <div class="toggle-btn" onclick="toggleOption(this)"></div>
+    </div>
+    <div class="setting-row">
+      <span>FX:</span>
+      <div class="toggle-btn" onclick="toggleOption(this)"></div>
+    </div>
+    <div class="setting-row">
+      <span>Supply Crate:</span>
+      <div class="toggle-btn" onclick="toggleOption(this)"></div>
+    </div>
+    <div class="setting-row">
+      <span>Combie Hint:</span>
+      <div class="toggle-btn" onclick="toggleOption(this)"></div>
+    </div>
+
+    <div class="volume-row">
+      <label for="volume">Volume:</label>
+      <input type="range" id="volume" class="volume-slider" min="0" max="100" value="50">
+    </div>
+
+    <button class="language-btn">🌐 English</button>
+    <div style="display: flex; gap: 10px;">
+      <button>Learn More</button>
+      <button>UI Scale</button>
+    </div>
+    <p class="back-to-menu"><a href="index.html">BACK TO MAIN</a></p>
+    <img class="game-logo" src="images/Pateros Quest Logo.png" alt="Game Logo">
+    <script>
+      function toggleOption(element) {
+      element.classList.toggle('on');
+    }
+    </script>
+  </div>
+</body>
+</html>

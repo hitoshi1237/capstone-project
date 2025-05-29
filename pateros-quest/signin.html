@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login & Sign Up</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+      background: #4d4f52;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 50px;
+    }
+
+    .container {
+      display: flex;
+      gap: 50px;
+    }
+
+    .form-box {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 500px;
+      height: 625px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="tel"] {
+      width: 480px;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      margin-top: 10px;
+      background: #df9e08;
+      border: none;
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+    p {
+        text-decoration: underline;
+        font-weight: bold;
+        padding-top: 20px;
+        text-align: center;
+        color: #0056b3;
+        border-radius: 10px;
+    }
+    a:hover {
+        color: white;
+    }
+    a:link {
+        color: white;
+        text-decoration: none;
+
+    }
+    a:link:visited {
+      color: white;
+    }
+    .back-to-main {
+      background-color: rgb(11, 107, 131);
+      margin-left: 100px;
+      margin-right: 100px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    legend {
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      color:#0753a4;
+      text-align: center;
+    }
+    .file-picture {
+      width: 180px;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #097581;
+      color: white;
+      
+    }
+    .sumbit-picture {
+      width: 180px;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #097581;
+      color: white;
+      margin-left: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Sign Up Form -->
+   <!-- Sign Up Form -->
+   <div class="form-box">
+    <h2>Sign Up</h2>
+    <form>
+      <input type="text" placeholder="First Name" required>
+      <input type="text" placeholder="Last Name" required>
+      <input type="text" placeholder="Username" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <input type="password" placeholder="Password" required>
+      <legend>Add your Photo (optional):</legend>
+      <input  class="file-picture" type="file" accept="image/*" >
+      <input  class="sumbit-picture" type="submit">
+      <button type="submit" onclick="myFunction()">Sign Up</button>
+      
+      <p class="back-to-main"><a href="index.html">BACK TO MAIN</a></p>
+    </form>
+  </div>
+  </div>
+  <script>
+    function myFunction() {
+      alert("Thank You for Signing into our game!");
+    }
+  </script>
+</body>
+</html>

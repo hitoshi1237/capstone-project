@@ -1,0 +1,276 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f0e6;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .overlay {
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    height: 100vh;
+     
+ 
+  
+  
+  }
+  .welcome-text {
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 100px;
+    
+    font-weight: bold;
+    margin-top: 20px;
+    color: #fff;
+  } 
+  .english-btn, .filipino-btn  {
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+   
+  button {
+    cursor: pointer;
+      background-color: rgb(214, 204, 204) ;
+      color: rgb(0, 0, 0);
+      border-color: rgb(108, 117, 125);
+      border-style: solid;
+      border-radius: 3px;
+      border-width: 1px;
+      height: 70px;
+      width: 205px;
+      margin: 4px;
+      cursor: pointer;
+      transition:background-color 0.15s;
+    }
+    button:hover {
+      background-color: rgb(118, 123, 128);
+      color: white;
+    }
+    button:active {
+      opacity: 0.8;
+    }
+  
+  nav {
+    background-color: #c6bcbc;
+    height: 50px;
+     
+  }
+  ul {
+     list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  a:link {
+    font-size: 20px;
+   text-decoration: none;
+   background-color: rgb(243, 193, 11);
+   padding: 10px;
+   color: black;
+   border-radius: 10px;
+   cursor: pointer;
+      transition:background-color 0.15s;
+  }
+  a:link:hover {
+    background-color: rgb(19, 108, 198);
+    color: white;
+  }
+  a:link:visited {
+    color: white;
+  }
+  .game-logo {
+    height: 300px;
+    width: 300px;
+    margin-top: 50px;
+    border-radius: 20px
+  }
+  .npc-dialog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .npc-dialog img {
+    width: 150px;
+    border-radius: 50%;
+  }
+  /*Quiz container*/
+  .quiz-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff8dc;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .choice-btn {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    font-size: 1rem;
+    color: white;
+    background-color: rgb(47, 119, 190);
+    font-size: 20px;
+    border-radius: 10px;
+  }
+  .choice-btn:hover {
+    background-color: rgb(255, 191, 0);
+    color: rgb(2, 2, 2);
+  }
+  #next-btn {
+    color: white;
+    border-radius: 10px;
+    background-color: rgb(7, 139, 31);
+    font-size: 20px;
+  }
+  #next-btn:hover {
+    background-color: #18b020;
+  }
+  
+  #feedback {
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  
+  /*Puzzle*/
+  .puzzle-title {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .puzzle-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 4px;
+    justify-content: center;
+    margin: 20px auto;
+  }
+  
+  .tile {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    background-size: cover;
+    cursor: grab;
+    box-sizing: border-box;
+  }
+  
+  
+  .selected {
+    border-color: gold;
+    box-shadow: 0 0 10px yellow;
+  }
+  /*Drag & Drop */
+/* Container Layout */
+.drag-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin: 20px;
+}
+
+/* Draggable Items */
+.draggables {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.drag-item {
+  width: 100px;
+  height: 100px;
+  cursor: grab;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  object-fit: cover;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.drag-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Drop Zones */
+.dropzones {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.drop-box {
+  width: 120px;
+  height: 100px;
+  border: 2px dashed #aaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  transition: background-color 0.3s, border-color 0.3s;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* When image is correctly dropped */
+.correct {
+  background-color: #d4edda;
+  border-color: #28a745;
+}
+
+/* Hover effect when dragging over */
+.drop-box.hovered {
+  background-color: #d0ebff;
+  border-color: #339af0;
+}
+
+/* Image dropped inside the box */
+.drop-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none; /* So it doesn't interfere with drag events */
+}
+
+/* Feedback & Button */
+#drag-feedback {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+#next-level-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #339af0;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#next-level-btn:hover {
+  background-color: #1c7ed6;
+}
+
+.hidden {
+  display: none;
+}
+
+  
